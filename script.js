@@ -51,10 +51,36 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1 , .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p , .about-content', { origin: 'right' });
 
-const typed = new Typed('.mutiple-text', {
-    strings : ['Frontend Developer' , 'Web Designer' , 'User Friendly Creator'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-})
+
+
+let form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  let fullName = document.querySelector('input[placeholder="Full Name"]').value;
+  let emailAddress = document.querySelector('input[placeholder="Email Address"]').value;
+  let mobileNumber = document.querySelector('input[placeholder="Mobile Number (Format: 123-456-7890)"]').value;
+  let emailSubject = document.querySelector('input[placeholder="Email Subject"]').value;
+  let message = document.querySelector('textarea[placeholder="Your Message"]').value;
+
+  // Perform client-side validation
+  if (!fullName || !emailAddress || !mobileNumber || !emailSubject || !message) {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  // If all fields are filled out, send the email using EmailJS
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    from_name: fullName,
+    from_email: emailAddress,
+    to_email: "mujahidsarwar288@gmail.com",
+    subject: emailSubject,
+    message: message,
+  })
+  .then(function(response) {
+    alert('Message sent successfully!');
+  }, function(error) {
+    alert('Failed to send message: ' + error);
+  });
+});
