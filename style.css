@@ -42,6 +42,18 @@ section {
   align-items: center;
   z-index: 100;
 }
+.header .logo{
+  background: linear-gradient(270deg, #1ae691, #9c88cb, #1d7c8b, #14a1ec); /* Beautiful gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header a span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .header.sticky {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
@@ -71,10 +83,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .home-img img {
   width: 28vw;
   animation: floatImage 4s ease-in-out infinite;
+  border-radius: 50px;
+  padding-left: 8px;
 }
 @keyframes floatImage {
   0% {
@@ -102,7 +117,15 @@ span {
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.3;
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
 }
+
+
 .home-content p {
   font-size: 1.6rem;
 }
@@ -136,6 +159,7 @@ span {
   letter-spacing: 0.2rem;
   font-weight: 600;
   transition: 0.5s ease;
+  margin: 3px;
 }
 .btn:hover {
   box-shadow: none;
@@ -149,6 +173,7 @@ span {
 }
 .about-img img {
   width: 28vw;
+  border-radius: 50px;
 }
 .heading {
   text-align: center;
@@ -160,6 +185,13 @@ span {
 }
 .about-content h3 {
   font-size: 2.6rem;
+ 
+}
+.about-content h3 span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .about-content p {
   font-size: 1.6rem;
@@ -167,6 +199,12 @@ span {
 } 
 .services h2 {
   margin-bottom: 5rem;
+}
+.services h2 span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .services-container {
   display: flex;
@@ -211,6 +249,12 @@ p.intro {
 }
 .portfolio h2 {
   margin-bottom: 4rem;
+}
+.portfolio h2 span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .portfolio-container {
   display: grid;
@@ -273,6 +317,13 @@ p.intro {
 }
 .contact h2 {
   margin-bottom: 3rem;
+
+}
+.contact h2 span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .contact form {
   max-width: 70rem;
@@ -315,6 +366,12 @@ p.intro {
 }
 .footer-text p {
   font-size: 1.8rem;
+}
+.footer-text p span{
+  background: linear-gradient(270deg, #DF8909 10%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer-iconTop a {
